@@ -1,5 +1,8 @@
 package com.example.kotniltest
 
+import com.example.kotniltest.data.Callphone
+import com.example.kotniltest.intface.Study
+import com.example.kotniltest.single.Singleton
 import kotlin.math.max
 
 /**
@@ -16,6 +19,17 @@ fun main(){
     println(maxNumber3(18,4))
     checkNumber(23L)
     xunHuan(0,10)
+    val student = Student("jom",18)
+    doDuty(student)
+
+    val callphone1 = Callphone("huawei",2222.21)
+    val callphone2 = Callphone("huawei",2222.22)
+    println(callphone1)
+    println(callphone1.equals(callphone2))
+    println(callphone1 == callphone2)
+
+    //单例
+    println(Singleton.singletonTest())
 
 }
 
@@ -78,5 +92,10 @@ fun xunHuan(fist: Int,last: Int){
         println(i)
     }
 
+}
+
+fun doDuty(student: Study){
+    student.readBooks()
+    student.doHomeworks()
 }
 
