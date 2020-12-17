@@ -1,5 +1,7 @@
 package com.example.kotniltest.single
 
+import com.example.kotniltest.Student
+
 /**
  *  author : Bobo
  *  e-mail : 827578285@qq.com
@@ -7,7 +9,15 @@ package com.example.kotniltest.single
  *  description : 单例
  */
 object Singleton {
+    var student: Student? = null
     fun singletonTest(){
         println("Singletontest is called.")
+    }
+
+    fun setstudent(stu: Student){
+        student = stu
+    }
+    fun test(){
+        student?.doHomeworks()
     }
 }

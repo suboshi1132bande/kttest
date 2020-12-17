@@ -8,7 +8,8 @@ package com.example.kotniltest.lambda
  */
 
 fun main(){
-    testLambda()
+    //testLambda()
+    listmap()
 }
 
 fun testLambda(){
@@ -36,4 +37,21 @@ fun testLambda(){
     val maxlenght5 = list.maxBy{it.length}
 
     println(maxlenght5)
+}
+
+fun listmap(){
+    val list = listOf("aa","bbb","ccc","ddd","e","f")
+    val newlist = list.map {it.toUpperCase() }
+    for (l in newlist){
+        println(l)
+    }
+
+    val newlist2 = list.filter { it.length > 2 }.map { it.toUpperCase() }
+    for (fu in newlist2){
+        println(fu)
+    }
+
+    val resoult = list.any { it.length > 2 }
+    val resout2 = list.all { it.length > 1 }
+    println("any is "+resoult + " all is "+ resout2)
 }
