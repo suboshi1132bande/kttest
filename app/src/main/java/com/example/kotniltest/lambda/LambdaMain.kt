@@ -55,3 +55,4 @@ fun listmap(){
     val resout2 = list.all { it.length > 1 }
     println("any is "+resoult + " all is "+ resout2)
 }
+

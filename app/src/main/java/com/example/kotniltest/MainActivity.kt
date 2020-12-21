@@ -1,10 +1,12 @@
 package com.example.kotniltest
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.kotniltest.ui.FistActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() ,View.OnClickListener {
@@ -14,6 +16,7 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         test_bt.setOnClickListener(this)
+        bt_2.setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -24,6 +27,10 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
                 Log.i(Tag,"IIIII")
                 Log.w(Tag,"WWwW")
                 Log.e(Tag,"EEEEE")
+            }
+            R.id.bt_2 ->{
+                val intent = Intent(this,FistActivity::class.java)
+                startActivity(intent)
             }
         }
     }
