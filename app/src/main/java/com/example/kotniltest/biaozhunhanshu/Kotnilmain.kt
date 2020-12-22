@@ -12,7 +12,10 @@ import java.lang.StringBuilder
 fun main(){
     //withTest()
     //runTest()
-    aplyTest()
+    //aplyTest()
+   // testString()
+    testMoney()
+    testTemes()
 }
 
 fun withTest(){
@@ -54,4 +57,30 @@ fun aplyTest(){
         append("end")
     }
     println(resoult.toString())
+}
+
+fun testString(){
+    var str = "12dfg%^fg".lettersCount()
+    println(str)
+
+
+}
+fun testMoney(){
+    val money1 = Money(3)
+    val money2 = Money(5)
+    val n = money1 + money2
+    println(n.vaule)
+    val nn = money1 + 10
+    println(nn.vaule)
+}
+
+fun testTemes(){
+    val str = "vfg" * 3
+    println(str)
+
+    repeat(4){
+        val sttr = "jik" * (1..10).random()
+        println(sttr)
+    }
+
 }
