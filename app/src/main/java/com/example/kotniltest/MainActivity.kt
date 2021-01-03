@@ -1,11 +1,13 @@
 package com.example.kotniltest
 
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.kotniltest.gaojiehanshu.open
 import com.example.kotniltest.ui.FistActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,5 +35,13 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
                 startActivity(intent)
             }
         }
+    }
+
+    fun testSharedpreference(){
+        getSharedPreferences("name",Context.MODE_PRIVATE).open {
+            putInt("kk",8)
+            putBoolean("t",true)
+        }
+
     }
 }
